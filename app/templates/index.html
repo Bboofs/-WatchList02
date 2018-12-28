@@ -1,0 +1,24 @@
+{% import 'macros.html' as macro %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    {% if template_title_var %}
+    <title>{{template_title_var}}</title>
+    {% else %}
+    <title>Welcome to the best Movie Review website</title>
+    {% endif %}
+</head>
+<body>
+<!-- Popular movie -->
+<h3> Popular Movies</h3>
+{{ macro.displayMovieList(popular)}}
+
+<!-- Upcoming movie  -->
+<h3> Upcoming Movies </h3>
+{{ macro.displayMovieList(upcoming)}}
+<!-- Now showing movie -->
+<h3>Now Showing</h3>
+{{ macro.displayMovieList(now_showing)}}
+</body>
+</html>
