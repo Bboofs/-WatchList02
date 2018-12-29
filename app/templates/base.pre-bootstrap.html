@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% if index_title %}
+    <title>{{ index_title }}</title>
+    {% elif movie_title %}
+    <title>{{ movie_title }}</title>
+    {% else %}
+    <title>Welcome to the Best Movie Review Website</title>
+    {% endif %}
+</head>
+<body>
+<!-- content block -->
+{% block content %}
+
+{% endblock %}
+</body>
+</html>
