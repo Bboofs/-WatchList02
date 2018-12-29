@@ -1,19 +1,28 @@
 {% extends 'base.html'%}
 {% import 'macros.html' as macro %}
 
+<!-- styles block -->
+
+{% block styles %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
+{% endblock %}
+
 <!-- content block -->
 {% block content %}
+<br />
 <!-- Popular movie -->
 <h3> Popular Movies</h3>
 <ul>
     {{ macro.displayMovieList(popular)}}
 </ul>
-
+<br />
 <!-- Upcoming movie  -->
 <h3> Upcoming Movies </h3>
 <ul>
     {{ macro.displayMovieList(upcoming)}}
 </ul>
+<br />
 <!-- Now showing movie -->
 <h3>Now Showing</h3>
 <ul>
