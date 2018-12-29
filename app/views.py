@@ -29,4 +29,5 @@ def movie(movie_id):
     :param movie_id:
     :return:
     '''
-    return render_template('movie.html', id = movie_id)
+    movie_title = 'Reviewing Movie ' + str(movie_id)
+    return render_template('movie.html', id = movie_id, movie_title = movie_title)

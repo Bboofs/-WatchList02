@@ -1,3 +1,4 @@
+{% extends 'base.html'%}
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +9,10 @@
     <title>Welcome to the best Movie Review website</title>
     {% endif %}
 </head>
-<body>
+
+<!-- content block -->
+{% block content %}
+
 <h1>Hello Movie {{id}}</h1>
-</body>
-</html>
+
+{% endblock %}
